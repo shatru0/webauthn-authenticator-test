@@ -1,0 +1,29 @@
+[package]
+name = "webauthn-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+webauthn-authenticator-rs = { version = "0.5.3", features = [
+  "ctap2",
+  "cable",
+  "ui-cli",
+  "softtoken",
+] }
+uuid = { version = "1.18.1", features = ["macro-diagnostics"] }
+tokio = "1.48.0"
+clap = { version = "4.5.51", features = ["derive"] }
+futures = "0.3.31"
+openssl = "0.10.75"
+bt-hci = "0.6.0"
+bluer = { version = "0.17.4", features = ["bluetoothd"] }
+serialport = { version = "4.2.0" }
+serialport-hci = { git = "https://github.com/micolous/serialport-hci.git", rev = "7931ad32510ac162f9c4e1147bdd411e40cffa0e" }
+bluetooth-hci = { git = "https://github.com/micolous/bluetooth-hci.git", rev = "04f98f734b0b9f0304e433335357307f63f6bc26" }
+bardecoder = "=0.4.0"
+image = ">= 0.23.14, < 0.24"
+# serde = { version = "1.0.228", features = ["derive"] }
+# serde_json = "1.0.145"
+# bincode = "2.0.1"
+# ron = "0.11.0"
+# toml = "0.9.8"
